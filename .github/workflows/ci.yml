@@ -33,7 +33,7 @@ jobs:
        run: echo "${{ secrets.DOCKER_PASSWORD }}" | DOCKER LOGIN -U "{{ secrets.DOCKER_USERNAME}}"
 
      - name: Push User Service to Docker Hub
-     - run:  
+     - run:  |
           docker tag user-service ${{ secrets.DOCKER_USERNAME }}/user-service:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/user-service:latest
 
@@ -63,7 +63,7 @@ jobs:
        run: echo "${{ secrets.DOCKER_PASSWORD }}" | DOCKER LOGIN -U "{{ secrets.DOCKER_USERNAME}}"
 
      - name: Push Video Service to Docker Hub
-     - run:  
+     - run:  |
           docker tag video-service ${{ secrets.DOCKER_USERNAME }}/video-service:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/video-service:latest
 
@@ -92,7 +92,7 @@ jobs:
        run: echo "${{ secrets.DOCKER_PASSWORD }}" | DOCKER LOGIN -U "{{ secrets.DOCKER_USERNAME}}"
 
      - name: Push API Gateway to Docker Hub
-     - run:  
+     - run:  |
           docker tag api-gateway ${{ secrets.DOCKER_USERNAME }}/api-gateway:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/api-gateway:latest
 
