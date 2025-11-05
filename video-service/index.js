@@ -3,8 +3,8 @@ const app = express();
 const port = 3001;  
 
 const videos = [
-  { id: 1, title: 'Introduction to Docker' },
-  { id: 2, title: 'Microservices with Node.js' }
+  { id: 1, title: 'Introduction to Docker', length: 5 },
+  { id: 2, title: 'Microservices with Node.js', length: 10 }
 ];  
  
 app.get('/videos', (req, res) => {
